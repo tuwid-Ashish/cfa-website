@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chandigarh Furniture Association – Asia's Premier Furniture Market Hub</title>
+  <meta name="description" content="CFA unites 100+ manufacturers, traders & importers of Chandigarh's furniture industry since 2000. Join Asia's largest furniture market platform." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* ── Homepage extras ── */
+    .featured-members-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    .leadership-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+    }
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .president-section {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .president-photo {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      position: relative;
+    }
+    .president-photo::after {
+      content: '';
+      position: absolute;
+      inset: -8px;
+      border-radius: calc(var(--radius-xl) + 8px);
+      border: 3px solid var(--gold);
+      opacity: 0.5;
+    }
+    .president-photo img { width: 100%; height: 360px; object-fit: cover; }
+    .president-quote {
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--gray-700);
+      border-left: 4px solid var(--gold);
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+    .contact-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--gray-200);
+    }
+    .contact-strip-item {
+      background: var(--white);
+      padding: 2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: var(--transition);
+    }
+    .contact-strip-item:hover { background: var(--navy); }
+    .contact-strip-item:hover .cs-icon { background: var(--gold); color: var(--navy); }
+    .contact-strip-item:hover .cs-label, .contact-strip-item:hover .cs-value { color: var(--white); }
+    .cs-icon {
+      width: 52px; height: 52px;
+      background: rgba(27,82,153,0.1);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue);
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+    .cs-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-500); font-weight: 600; }
+    .cs-value { font-weight: 700; color: var(--navy); font-size: 0.95rem; transition: var(--transition); }
+    @media (max-width: 1024px) {
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .leadership-grid { grid-template-columns: repeat(2, 1fr); }
+      .featured-members-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .news-grid { grid-template-columns: 1fr; }
+      .president-section { grid-template-columns: 1fr; }
+      .president-photo { max-width: 320px; margin: 0 auto; }
+      .contact-strip { grid-template-columns: 1fr; }
+      .featured-members-grid { grid-template-columns: 1fr; }
+      .leadership-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .cat-grid { grid-template-columns: 1fr 1fr; }
+      .leadership-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════ -->
+<nav class="navbar" aria-label="Main navigation">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand" aria-label="CFA Home">
+        <div class="brand-logo">CFA</div>
+        <div>
+          <div class="brand-text-main">Chandigarh Furniture<br>Association</div>
+          <span class="brand-text-sub">Est. 2000 · Chandigarh</span>
+        </div>
+      </a>
+
+      <ul class="nav-menu" role="menubar">
+        <li class="nav-item" role="none"><a href="index.html" class="nav-link active" role="menuitem">Home</a></li>
+        <li class="nav-item" role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+        <li class="nav-item" role="none">
+          <a href="#" class="nav-link" role="menuitem" aria-haspopup="true">Members <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="executive-members.html" class="dropdown-item" role="menuitem"><i class="fa-solid fa-star"></i> Executive Members</a></li>
+            <li><a href="members-directory.html" class="dropdown-item" role="menuitem"><i class="fa-solid fa-building"></i> Members Directory</a></li>
+            <li><a href="membership.html" class="dropdown-item" role="menuitem"><i class="fa-solid fa-user-plus"></i> Become a Member</a></li>
+          </ul>
+        </li>
+        <li class="nav-item" role="none"><a href="leadership.html" class="nav-link" role="menuitem">Leadership</a></li>
+        <li class="nav-item" role="none"><a href="gallery.html" class="nav-link" role="menuitem">Gallery</a></li>
+        <li class="nav-item" role="none"><a href="news.html" class="nav-link" role="menuitem">News</a></li>
+        <li class="nav-item" role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="membership.html" class="btn btn-gold btn-sm">Join CFA</a>
+        <a href="contact.html#login" class="nav-login"><i class="fa-solid fa-lock" style="font-size:0.75rem;margin-right:4px;"></i>Login</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About CFA</a></li>
+      <li><a href="executive-members.html">Executive Members</a></li>
+      <li><a href="members-directory.html">Members Directory</a></li>
+      <li><a href="leadership.html">Leadership</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="news.html">News &amp; Events</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="mobile-nav-actions">
+      <a href="membership.html" class="btn btn-gold btn-sm">Join CFA</a>
+      <a href="contact.html" class="btn btn-outline-white btn-sm">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     HERO SECTION
+══════════════════════════════════════════ -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content fade-in">
+      <div class="hero-badge">
+        <i class="fa-solid fa-award"></i> Asia's Premier Furniture Market
+      </div>
+      <h1>Chandigarh's <span>Furniture</span><br>Industry, United.</h1>
+      <p>Bringing together 100+ manufacturers, traders &amp; importers on one powerful platform — driving growth, trust, and industry leadership since 2000.</p>
+      <div class="hero-ctas">
+        <a href="members-directory.html" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-building"></i> Explore Members
+        </a>
+        <a href="membership.html" class="btn btn-outline-white btn-lg">
+          <i class="fa-solid fa-user-plus"></i> Join CFA
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-target="104" data-suffix="+">0+</div>
+          <div class="hero-stat-label">Member Companies</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-target="25" data-suffix="+ Yrs">0+ Yrs</div>
+          <div class="hero-stat-label">Established</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-target="1" data-suffix=" Platform">0 Platform</div>
+          <div class="hero-stat-label">Unified Voice</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-target="8" data-suffix=" Sectors">0 Sectors</div>
+          <div class="hero-stat-label">Industry Sectors</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator" aria-hidden="true">
+    <span>Scroll</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     ABOUT STRIP
+══════════════════════════════════════════ -->
+<section class="about-strip">
+  <div class="about-strip-grid">
+    <div class="about-strip-item fade-in">
+      <div class="strip-icon"><i class="fa-solid fa-users"></i></div>
+      <h4>Who We Are</h4>
+      <p>A unified platform for furniture manufacturers, traders, and importers in Chandigarh's thriving Industrial Area — representing one of Asia's largest furniture markets.</p>
+    </div>
+    <div class="about-strip-item fade-in fade-in-delay-1">
+      <div class="strip-icon"><i class="fa-solid fa-bullseye"></i></div>
+      <h4>Our Mission</h4>
+      <p>To empower members with structured business development, infrastructure support, and a collective voice in policy and market matters across PAN India and beyond.</p>
+    </div>
+    <div class="about-strip-item fade-in fade-in-delay-2">
+      <div class="strip-icon"><i class="fa-solid fa-globe-asia"></i></div>
+      <h4>Our Vision</h4>
+      <p>To grow Chandigarh's furniture market into the largest in Asia — increasing our member base, strengthening the supply chain, and delivering world-class quality.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     STATS BAR
+══════════════════════════════════════════ -->
+<section class="stats-bar" aria-label="Association statistics">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item fade-in">
+        <span class="stat-num" data-target="104" data-suffix="+">104+</span>
+        <div class="stat-label">Active Member Companies</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item fade-in fade-in-delay-1">
+        <span class="stat-num" data-target="2000" data-suffix="">2000</span>
+        <div class="stat-label">Year Established</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item fade-in fade-in-delay-2">
+        <span class="stat-num" data-target="1" data-suffix="">#1</span>
+        <div class="stat-label">Furniture Market in Asia (City)</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item fade-in fade-in-delay-3">
+        <span class="stat-num" data-target="8" data-suffix="+">8+</span>
+        <div class="stat-label">Industry Sectors Covered</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FEATURED MEMBERS
+══════════════════════════════════════════ -->
+<section class="section-pad">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Our Members</span>
+      <h2>Featured Member Companies</h2>
+      <div class="divider"></div>
+      <p>A snapshot of the diverse businesses that make CFA the powerhouse of Chandigarh's furniture industry.</p>
+    </div>
+    <div class="featured-members-grid">
+      <div class="member-card fade-in">
+        <div class="member-card-header">
+          <div class="member-avatar">JL</div>
+          <div>
+            <div class="member-name">Jai Luxmi Steel Industries</div>
+            <div class="member-owner">Sh. Amarnath Bansal</div>
+          </div>
+        </div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i> Plot No. 301 &amp; 685, Indl Area, Ph-II, Chd</div>
+      </div>
+      <div class="member-card fade-in fade-in-delay-1">
+        <div class="member-card-header">
+          <div class="member-avatar">GT</div>
+          <div>
+            <div class="member-name">Garg Traders</div>
+            <div class="member-owner">Sh. Shishpal Garg</div>
+          </div>
+        </div>
+        <div class="member-cat">Steel Furniture · Desert Coolers</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i> Plot No. 695, Indl Area, Ph-II, Chd</div>
+      </div>
+      <div class="member-card fade-in fade-in-delay-2">
+        <div class="member-card-header">
+          <div class="member-avatar">VF</div>
+          <div>
+            <div class="member-name">Vintage Mattress Industries</div>
+            <div class="member-owner">Sh. Sunil Bansal</div>
+          </div>
+        </div>
+        <div class="member-cat">Mattresses &amp; Foam</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i> Plot No. 708, Indl Area, Ph-II, Chd</div>
+      </div>
+      <div class="member-card fade-in">
+        <div class="member-card-header">
+          <div class="member-avatar">SV</div>
+          <div>
+            <div class="member-name">Shree Vinayak Industries</div>
+            <div class="member-owner">Sh. Rajan Jindal</div>
+          </div>
+        </div>
+        <div class="member-cat">Office &amp; School Furniture</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i> Plot 321, Indl Area Phase 2, Chd</div>
+      </div>
+      <div class="member-card fade-in fade-in-delay-1">
+        <div class="member-card-header">
+          <div class="member-avatar">VA</div>
+          <div>
+            <div class="member-name">Vanser – The Furniture Merchants</div>
+            <div class="member-owner">Sh. Satish Goyal</div>
+          </div>
+        </div>
+        <div class="member-cat">Steel Furniture · Office Furniture</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i> Plot No. 758, Indl Area, Phase-II, Chd</div>
+      </div>
+      <div class="member-card fade-in fade-in-delay-2">
+        <div class="member-card-header">
+          <div class="member-avatar">OR</div>
+          <div>
+            <div class="member-name">Ore Furniture (P) Ltd.</div>
+            <div class="member-owner">Sh. Manoj Kumar</div>
+          </div>
+        </div>
+        <div class="member-cat">High Class Steel Furniture</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i> Plot No. 723, Indl Area, Ph-II, Chd</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="members-directory.html" class="btn btn-primary btn-lg">
+        <i class="fa-solid fa-building"></i> View All 100+ Members
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PRODUCT CATEGORIES
+══════════════════════════════════════════ -->
+<section class="section-pad bg-off-white">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Product Categories</span>
+      <h2>What Our Members Make</h2>
+      <div class="divider"></div>
+      <p>From precision steel furniture to luxury mattresses — CFA covers every corner of the furniture ecosystem.</p>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card fade-in">
+        <img src="https://images.pexels.com/photos/7534232/pexels-photo-7534232.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&dpr=1" alt="Office Furniture" loading="lazy" />
+        <div class="cat-overlay">
+          <div>
+            <div class="cat-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <div class="cat-label">Office Furniture<span>Desks, Chairs, Cabinets</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card fade-in fade-in-delay-1">
+        <img src="https://images.pexels.com/photos/2082093/pexels-photo-2082093.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&dpr=1" alt="Bedroom Furniture" loading="lazy" />
+        <div class="cat-overlay">
+          <div>
+            <div class="cat-icon"><i class="fa-solid fa-bed"></i></div>
+            <div class="cat-label">Bedroom Furniture<span>Beds, Almirahs, Wardrobes</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card fade-in fade-in-delay-2">
+        <img src="https://images.pexels.com/photos/376531/pexels-photo-376531.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&dpr=1" alt="Mattresses and Foam" loading="lazy" />
+        <div class="cat-overlay">
+          <div>
+            <div class="cat-icon"><i class="fa-solid fa-moon"></i></div>
+            <div class="cat-label">Mattresses &amp; Foam<span>All Types &amp; Sizes</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card fade-in fade-in-delay-3">
+        <img src="https://images.pexels.com/photos/245240/pexels-photo-245240.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&dpr=1" alt="School Furniture" loading="lazy" />
+        <div class="cat-overlay">
+          <div>
+            <div class="cat-icon"><i class="fa-solid fa-school"></i></div>
+            <div class="cat-label">School Furniture<span>Desks, Benches, Labs</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card fade-in">
+        <img src="https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&dpr=1" alt="Steel Furniture" loading="lazy" />
+        <div class="cat-overlay">
+          <div>
+            <div class="cat-icon"><i class="fa-solid fa-industry"></i></div>
+            <div class="cat-label">Steel Furniture<span>Racks, Almirahs, Shelves</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card fade-in fade-in-delay-1">
+        <img src="https://images.pexels.com/photos/6758238/pexels-photo-6758238.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&dpr=1" alt="Home Decor and Sofas" loading="lazy" />
+        <div class="cat-overlay">
+          <div>
+            <div class="cat-icon"><i class="fa-solid fa-couch"></i></div>
+            <div class="cat-label">Sofas &amp; Home Decor<span>Living Room Essentials</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card fade-in fade-in-delay-2">
+        <img src="https://images.pexels.com/photos/2883049/pexels-photo-2883049.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&dpr=1" alt="Hardware Goods" loading="lazy" />
+        <div class="cat-overlay">
+          <div>
+            <div class="cat-icon"><i class="fa-solid fa-wrench"></i></div>
+            <div class="cat-label">Hardware &amp; Accessories<span>Fittings, Pipes, Tools</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card fade-in fade-in-delay-3">
+        <img src="https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&dpr=1" alt="Kitchen Accessories" loading="lazy" />
+        <div class="cat-overlay">
+          <div>
+            <div class="cat-icon"><i class="fa-solid fa-kitchen-set"></i></div>
+            <div class="cat-label">Kitchen &amp; Accessories<span>Modular &amp; Utility</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     LEADERSHIP SNAPSHOT
+══════════════════════════════════════════ -->
+<section class="section-pad">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Our Leadership</span>
+      <h2>The Team That Leads CFA</h2>
+      <div class="divider"></div>
+      <p>Experienced industry leaders driving CFA's mission with dedication, integrity, and a passion for Chandigarh's furniture industry.</p>
+    </div>
+    <div class="leadership-grid">
+      <div class="leader-card featured fade-in">
+        <div class="leader-avatar">AB</div>
+        <div class="leader-name">Amarnath Bansal</div>
+        <div class="leader-role">Chairman</div>
+        <div class="leader-phone"><i class="fa-solid fa-phone" style="font-size:0.7rem;margin-right:4px;"></i>9041158555</div>
+      </div>
+      <div class="leader-card featured fade-in fade-in-delay-1">
+        <div class="leader-avatar">SG</div>
+        <div class="leader-name">Shishpal Garg</div>
+        <div class="leader-role">President</div>
+        <div class="leader-phone"><i class="fa-solid fa-phone" style="font-size:0.7rem;margin-right:4px;"></i>9417725147</div>
+      </div>
+      <div class="leader-card fade-in fade-in-delay-2">
+        <div class="leader-avatar">SB</div>
+        <div class="leader-name">Sunil Bansal</div>
+        <div class="leader-role">Gen. Secretary</div>
+        <div class="leader-phone"><i class="fa-solid fa-phone" style="font-size:0.7rem;margin-right:4px;"></i>9814245708</div>
+      </div>
+      <div class="leader-card fade-in fade-in-delay-3">
+        <div class="leader-avatar">RG</div>
+        <div class="leader-name">Raj Kumar Goel</div>
+        <div class="leader-role">Treasurer</div>
+        <div class="leader-phone"><i class="fa-solid fa-phone" style="font-size:0.7rem;margin-right:4px;"></i>9464088065</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="leadership.html" class="btn btn-outline-gold">
+        <i class="fa-solid fa-users"></i> Meet Full Leadership Team
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PRESIDENT'S MESSAGE
+══════════════════════════════════════════ -->
+<section class="section-pad bg-off-white">
+  <div class="container">
+    <div class="president-section">
+      <div class="president-photo fade-in">
+        <img src="https://images.pexels.com/photos/8276364/pexels-photo-8276364.jpeg?auto=compress&cs=tinysrgb&w=600&h=750&dpr=1" alt="President Shishpal Garg" loading="lazy" />
+      </div>
+      <div class="fade-in fade-in-delay-1">
+        <span class="section-label">President's Message</span>
+        <h2>A Word from Our President</h2>
+        <div class="divider divider-left" style="margin-bottom:1.5rem;"></div>
+        <p class="president-quote">
+          "Chandigarh is one of the Largest Furniture Markets of Asia. We are proud to be a part of it. CFA has seen remarkable growth in the past few years — made possible by the hard work, sincerity and commitment of our members."
+        </p>
+        <p style="margin-bottom:1.5rem;">CFA is bringing its complete digital presence to help our members grow, connect, and compete on a PAN India and global stage. Our platform provides structured business development, security, and infrastructure growth for every member.</p>
+        <div style="display:flex;align-items:center;gap:1rem;">
+          <div>
+            <div style="font-weight:700;color:var(--navy);font-family:'Poppins',sans-serif;">Sh. Shishpal Garg</div>
+            <div style="font-size:0.85rem;color:var(--gold);font-weight:600;">President, CFA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     JOIN CFA CTA
+══════════════════════════════════════════ -->
+<section class="cta-banner">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="fade-in">
+      <span class="section-label">Membership</span>
+      <h2 class="text-white" style="margin-bottom:1rem;">Ready to Grow Your Business?</h2>
+      <p>Join 100+ furniture industry leaders on one unified platform. Get access to business development resources, networking events, and a collective industry voice.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="membership.html" class="btn btn-gold btn-lg">
+          <i class="fa-solid fa-user-plus"></i> Apply for Membership
+        </a>
+        <a href="contact.html" class="btn btn-outline-white btn-lg">
+          <i class="fa-solid fa-envelope"></i> Enquire Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     NEWS & EVENTS
+══════════════════════════════════════════ -->
+<section class="section-pad">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Latest Updates</span>
+      <h2>News &amp; Events</h2>
+      <div class="divider"></div>
+      <p>Stay updated with CFA's latest announcements, industry events, and community initiatives.</p>
+    </div>
+    <div class="news-grid">
+      <article class="news-card fade-in">
+        <div class="news-card-img">
+          <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&dpr=1" alt="CFA Annual Meeting" loading="lazy" />
+        </div>
+        <div class="news-card-body">
+          <div class="news-meta">
+            <div class="news-date"><i class="fa-regular fa-calendar"></i> Jan 2026</div>
+            <div class="news-tag">Event</div>
+          </div>
+          <h4>Annual General Meeting 2026</h4>
+          <p>CFA held its Annual General Meeting with record participation from 90+ member companies to discuss industry roadmap and upcoming initiatives.</p>
+          <a href="news.html" class="news-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+      <article class="news-card fade-in fade-in-delay-1">
+        <div class="news-card-img">
+          <img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&dpr=1" alt="Blood Donation Camp" loading="lazy" />
+        </div>
+        <div class="news-card-body">
+          <div class="news-meta">
+            <div class="news-date"><i class="fa-regular fa-calendar"></i> Dec 2025</div>
+            <div class="news-tag">Social</div>
+          </div>
+          <h4>Blood Donation Camp — Phase II</h4>
+          <p>CFA organized its annual blood donation camp at Industrial Area Phase-II with over 150 volunteers participating in this noble cause.</p>
+          <a href="news.html" class="news-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+      <article class="news-card fade-in fade-in-delay-2">
+        <div class="news-card-img">
+          <img src="https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&dpr=1" alt="GST Workshop" loading="lazy" />
+        </div>
+        <div class="news-card-body">
+          <div class="news-meta">
+            <div class="news-date"><i class="fa-regular fa-calendar"></i> Nov 2025</div>
+            <div class="news-tag">Workshop</div>
+          </div>
+          <h4>GST &amp; Taxation Workshop for Members</h4>
+          <p>CFA conducted a comprehensive workshop on GST updates, new taxation regulations, and compliance guidelines for all member businesses.</p>
+          <a href="news.html" class="news-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="news.html" class="btn btn-primary">View All News &amp; Events</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CONTACT STRIP
+══════════════════════════════════════════ -->
+<section class="contact-strip">
+  <div class="contact-strip-item fade-in">
+    <div class="cs-icon"><i class="fa-solid fa-location-dot"></i></div>
+    <div>
+      <div class="cs-label">Our Address</div>
+      <div class="cs-value">Plot No. 708, Indl Area, Phase-II, Chandigarh – 160002</div>
+    </div>
+  </div>
+  <div class="contact-strip-item fade-in fade-in-delay-1">
+    <div class="cs-icon"><i class="fa-solid fa-phone"></i></div>
+    <div>
+      <div class="cs-label">Call Us</div>
+      <div class="cs-value">0172-4637082</div>
+    </div>
+  </div>
+  <div class="contact-strip-item fade-in fade-in-delay-2">
+    <div class="cs-icon"><i class="fa-solid fa-envelope"></i></div>
+    <div>
+      <div class="cs-label">Email Us</div>
+      <div class="cs-value">contact@chandigarhfurnitureassociation.com</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">CFA</div>
+        <div class="brand-text-main" style="color:var(--white);margin-bottom:0.25rem;">Chandigarh Furniture Association</div>
+        <p class="footer-tagline">Uniting Chandigarh's furniture industry since 2000. One platform for manufacturers, traders, importers, and the customers they serve.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About CFA</a></li>
+          <li><a href="members-directory.html"><i class="fa-solid fa-chevron-right"></i> Members Directory</a></li>
+          <li><a href="leadership.html"><i class="fa-solid fa-chevron-right"></i> Leadership</a></li>
+          <li><a href="gallery.html"><i class="fa-solid fa-chevron-right"></i> Gallery</a></li>
+          <li><a href="news.html"><i class="fa-solid fa-chevron-right"></i> News &amp; Events</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Member Services</div>
+        <ul class="footer-links">
+          <li><a href="membership.html"><i class="fa-solid fa-chevron-right"></i> Become a Member</a></li>
+          <li><a href="executive-members.html"><i class="fa-solid fa-chevron-right"></i> Executive Members</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Suggestions</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> File a Complaint</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Contact Info</div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Plot No. 708, Industrial Area, Phase-II, Chandigarh – 160002, U.T. India</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <span><a href="tel:01724637082">0172-4637082</a></span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span><a href="mailto:contact@chandigarhfurnitureassociation.com">contact@chandigarhfurnitureassociation.com</a></span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-regular fa-clock"></i>
+          <span>Mon – Sat: 9:00 AM – 6:00 PM</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Chandigarh Furniture Association. All rights reserved.</p>
+      <p>Designed &amp; built for <a href="#">CFA Chandigarh</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/911724637082" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

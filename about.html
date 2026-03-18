@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About CFA – Chandigarh Furniture Association</title>
+  <meta name="description" content="Learn about the Chandigarh Furniture Association — established in 2000 to unite furniture manufacturers, traders, and importers of Asia's largest furniture market." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .about-main-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .about-img-wrap { position: relative; border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-xl); }
+    .about-img-wrap img { width: 100%; height: 480px; object-fit: cover; }
+    .about-badge-float {
+      position: absolute; bottom: 2rem; left: 2rem;
+      background: var(--navy); color: var(--white);
+      padding: 1.25rem 1.5rem; border-radius: var(--radius-md);
+      border-left: 4px solid var(--gold);
+      box-shadow: var(--shadow-lg);
+    }
+    .about-badge-float .num { font-family:'Poppins',sans-serif; font-size: 2rem; font-weight:800; color: var(--gold); line-height:1; }
+    .about-badge-float .lbl { font-size: 0.82rem; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.08em; }
+    .values-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; }
+    .value-card { text-align: center; padding: 2rem 1.25rem; border-radius: var(--radius-lg); border: 2px solid var(--gray-200); transition: var(--transition); }
+    .value-card:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .value-icon { width:64px; height:64px; border-radius:50%; background: linear-gradient(135deg,var(--navy),var(--blue)); display:flex; align-items:center; justify-content:center; color:var(--white); font-size:1.4rem; margin: 0 auto 1rem; }
+    .mission-vision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .mv-card { padding: 2.5rem; border-radius: var(--radius-xl); }
+    .mv-card.mission { background: linear-gradient(135deg, var(--navy), var(--blue)); color: var(--white); }
+    .mv-card.vision  { background: linear-gradient(135deg, #7c5c1e, var(--gold)); color: var(--white); }
+    .mv-card h3 { color: var(--white); margin-bottom: 1rem; }
+    .mv-card p { color: rgba(255,255,255,0.85); }
+    .mv-icon { font-size: 2.5rem; margin-bottom: 1rem; opacity: 0.8; }
+    .timeline { position: relative; padding-left: 2rem; }
+    .timeline::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; background: linear-gradient(to bottom, var(--navy), var(--gold)); border-radius:2px; }
+    .timeline-item { position:relative; padding: 0 0 2rem 2rem; }
+    .timeline-item::before { content:''; position:absolute; left:-1.4rem; top:4px; width:14px; height:14px; border-radius:50%; background:var(--gold); border:3px solid var(--white); box-shadow:0 0 0 3px var(--navy); }
+    .timeline-year { font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--gold); margin-bottom:4px; }
+    .timeline-item h4 { color:var(--navy); margin-bottom:0.4rem; }
+    .timeline-item p { font-size:0.9rem; }
+    @media(max-width:1024px){ .values-grid{grid-template-columns:repeat(2,1fr);} }
+    @media(max-width:768px){ .about-main-grid{grid-template-columns:1fr;} .about-img-wrap img{height:300px;} .mission-vision-grid{grid-template-columns:1fr;} .values-grid{grid-template-columns:1fr 1fr;} }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar" aria-label="Main navigation">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand">
+        <div class="brand-logo">CFA</div>
+        <div>
+          <div class="brand-text-main">Chandigarh Furniture<br>Association</div>
+          <span class="brand-text-sub">Est. 2000 · Chandigarh</span>
+        </div>
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Members <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="executive-members.html" class="dropdown-item"><i class="fa-solid fa-star"></i> Executive Members</a></li>
+            <li><a href="members-directory.html" class="dropdown-item"><i class="fa-solid fa-building"></i> Members Directory</a></li>
+            <li><a href="membership.html" class="dropdown-item"><i class="fa-solid fa-user-plus"></i> Become a Member</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="leadership.html" class="nav-link">Leadership</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="membership.html" class="btn btn-gold btn-sm">Join CFA</a>
+        <a href="contact.html" class="nav-login"><i class="fa-solid fa-lock" style="font-size:0.75rem;margin-right:4px;"></i>Login</a>
+      </div>
+      <button class="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-nav">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About CFA</a></li>
+      <li><a href="executive-members.html">Executive Members</a></li><li><a href="members-directory.html">Members Directory</a></li>
+      <li><a href="leadership.html">Leadership</a></li><li><a href="gallery.html">Gallery</a></li>
+      <li><a href="news.html">News &amp; Events</a></li><li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="mobile-nav-actions"><a href="membership.html" class="btn btn-gold btn-sm">Join CFA</a></div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <div class="container">
+    <span class="section-label">Our Story</span>
+    <h1>About CFA</h1>
+    <p>25+ years of building Chandigarh's furniture industry — one member at a time.</p>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i><span>About</span>
+    </nav>
+  </div>
+</header>
+
+<!-- ── ABOUT MAIN ── -->
+<section class="section-pad">
+  <div class="container">
+    <div class="about-main-grid">
+      <div class="fade-in">
+        <span class="section-label">Who We Are</span>
+        <h2>The Voice of Chandigarh's Furniture Industry</h2>
+        <div class="divider divider-left" style="margin-bottom:1.5rem;"></div>
+        <p style="margin-bottom:1rem;">Chandigarh Furniture Association (CFA) was established in <strong>2000</strong> by a visionary group of furniture dealers with a bold ambition: to transform Chandigarh into a single, unified furniture market — the largest in India, and eventually, Asia.</p>
+        <p style="margin-bottom:1rem;">CFA came into existence to empower and infuse new confidence in manufacturers, dealers, and importers. Our objective has always been clear — deliver the best to customers while protecting and growing the interests of our members.</p>
+        <p style="margin-bottom:1.5rem;">Today, with over <strong>104 active member companies</strong>, CFA represents every segment of the furniture supply chain — from steel fabricators and mattress makers to hardware suppliers and interior decorators — all operating from Chandigarh's thriving Industrial Area.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="membership.html" class="btn btn-primary">Join CFA Today</a>
+          <a href="members-directory.html" class="btn btn-outline-gold">Browse Members</a>
+        </div>
+      </div>
+      <div class="about-img-wrap fade-in fade-in-delay-1">
+        <img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=700&h=500&dpr=1" alt="CFA Members Meeting" loading="lazy" />
+        <div class="about-badge-float">
+          <div class="num">104+</div>
+          <div class="lbl">Member Companies</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MISSION & VISION ── -->
+<section class="section-pad bg-off-white">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Purpose &amp; Direction</span>
+      <h2>Mission &amp; Vision</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="mission-vision-grid">
+      <div class="mv-card mission fade-in">
+        <div class="mv-icon"><i class="fa-solid fa-bullseye"></i></div>
+        <h3>Our Mission</h3>
+        <p>To bring all furniture manufacturers, traders, and importers of Chandigarh together on a single platform — providing structured business development, infrastructure growth, security, and representation in multiple forums across PAN India and beyond.</p>
+        <p style="margin-top:1rem;">We believe progress is made faster when we unite around common requirements, speak with one voice, and support each other's growth.</p>
+      </div>
+      <div class="mv-card vision fade-in fade-in-delay-1">
+        <div class="mv-icon"><i class="fa-solid fa-eye"></i></div>
+        <h3>Our Vision</h3>
+        <p>To become the largest and most respected furniture market association not just in India, but across Asia — growing our member base manifold and establishing Chandigarh as the undisputed furniture capital of the subcontinent.</p>
+        <p style="margin-top:1rem;">We welcome all companies in related fields to join hands and become part of this prestigious, industry-defining association.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── VALUES ── -->
+<section class="section-pad">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">What We Stand For</span>
+      <h2>Our Core Values</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="values-grid">
+      <div class="value-card fade-in">
+        <div class="value-icon"><i class="fa-solid fa-handshake"></i></div>
+        <h4>Unity</h4>
+        <p style="font-size:0.9rem;">Together we achieve what no single member can alone. CFA is the force that unites Chandigarh's furniture industry.</p>
+      </div>
+      <div class="value-card fade-in fade-in-delay-1">
+        <div class="value-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h4>Integrity</h4>
+        <p style="font-size:0.9rem;">Our association is built on trust, transparency, and fair representation for every member — big or small.</p>
+      </div>
+      <div class="value-card fade-in fade-in-delay-2">
+        <div class="value-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h4>Growth</h4>
+        <p style="font-size:0.9rem;">Driving business development, infrastructure expansion, and market access for all our member companies.</p>
+      </div>
+      <div class="value-card fade-in fade-in-delay-3">
+        <div class="value-icon"><i class="fa-solid fa-heart"></i></div>
+        <h4>Community</h4>
+        <p style="font-size:0.9rem;">CFA leads by example in social responsibility — blood camps, charitable work, and community upliftment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── OUR JOURNEY TIMELINE ── -->
+<section class="section-pad bg-off-white">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;">
+      <div class="fade-in">
+        <span class="section-label">Our Journey</span>
+        <h2>From 2000 to Today</h2>
+        <div class="divider divider-left" style="margin-bottom:2rem;"></div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2000</div>
+            <h4>CFA Founded</h4>
+            <p>A group of visionary furniture dealers establish CFA to bring unity and structure to Chandigarh's growing furniture trade.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2005 – 2010</div>
+            <h4>Rapid Member Growth</h4>
+            <p>CFA membership grows significantly as more manufacturers and traders recognize the power of collective representation.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2015</div>
+            <h4>Industry Forums &amp; Workshops</h4>
+            <p>Regular meetings on taxation, security, marketing, and infrastructure become a cornerstone of CFA's value to members.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2017</div>
+            <h4>First Website Launch</h4>
+            <p>CFA launches its first digital presence — marking the association's entry into the online world.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2026</div>
+            <h4>Modern Digital Relaunch</h4>
+            <p>CFA relaunches with a fully modernized website — a platform worthy of Asia's furniture capital city.</p>
+          </div>
+        </div>
+      </div>
+      <div class="fade-in fade-in-delay-1">
+        <img src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=700&h=600&dpr=1" alt="CFA Team at Work" style="border-radius:var(--radius-xl);box-shadow:var(--shadow-xl);width:100%;height:480px;object-fit:cover;" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRESIDENT'S MESSAGE ── -->
+<section class="section-pad">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Leadership Message</span>
+      <h2>President's Message</h2>
+      <div class="divider"></div>
+    </div>
+    <div style="max-width:800px;margin:0 auto;">
+      <div style="background:var(--off-white);border-radius:var(--radius-xl);padding:3rem;border-left:5px solid var(--gold);position:relative;" class="fade-in">
+        <i class="fa-solid fa-quote-left" style="font-size:3rem;color:var(--gold);opacity:0.3;position:absolute;top:2rem;right:2rem;"></i>
+        <p style="font-size:1.1rem;font-style:italic;color:var(--gray-700);margin-bottom:1.5rem;line-height:1.9;">
+          With great pleasure, I inform you that Chandigarh Furniture Association (CFA) is bringing out its fully modernized website containing all required information about our association and its members.
+        </p>
+        <p style="margin-bottom:1.5rem;">As we all know, Chandigarh is one of the Largest Furniture Markets of Asia. We are proud to be a part of it. CFA has seen large growth in the past few years — made possible mainly because of the hard work and sincerity of our members and also the support and patronage of our valued customers to whom we are ever grateful.</p>
+        <p style="margin-bottom:1.5rem;">I sincerely pay my good wishes to all the members of our market for their prosperity. I hope our Furniture Association will do extremely good work in the coming days and together we shall make Chandigarh's furniture industry a name known across Asia and beyond.</p>
+        <div style="display:flex;align-items:center;gap:1rem;border-top:1px solid var(--gray-200);padding-top:1.5rem;">
+          <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--blue));display:flex;align-items:center;justify-content:center;color:var(--white);font-family:'Poppins',sans-serif;font-weight:700;font-size:1.1rem;">SG</div>
+          <div>
+            <div style="font-weight:700;color:var(--navy);font-family:'Poppins',sans-serif;font-size:1rem;">Sh. Shishpal Garg</div>
+            <div style="font-size:0.85rem;color:var(--gold);font-weight:600;">President, CFA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="fade-in">
+      <h2 class="text-white">Be Part of CFA's Story</h2>
+      <p>Join 100+ furniture businesses building Asia's premier furniture market together.</p>
+      <a href="membership.html" class="btn btn-gold btn-lg"><i class="fa-solid fa-user-plus"></i> Apply for Membership</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">CFA</div>
+        <div class="brand-text-main" style="color:var(--white);margin-bottom:0.25rem;">Chandigarh Furniture Association</div>
+        <p class="footer-tagline">Uniting Chandigarh's furniture industry since 2000.</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About CFA</a></li>
+          <li><a href="members-directory.html"><i class="fa-solid fa-chevron-right"></i> Members Directory</a></li>
+          <li><a href="leadership.html"><i class="fa-solid fa-chevron-right"></i> Leadership</a></li>
+          <li><a href="gallery.html"><i class="fa-solid fa-chevron-right"></i> Gallery</a></li>
+          <li><a href="news.html"><i class="fa-solid fa-chevron-right"></i> News &amp; Events</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Member Services</div>
+        <ul class="footer-links">
+          <li><a href="membership.html"><i class="fa-solid fa-chevron-right"></i> Become a Member</a></li>
+          <li><a href="executive-members.html"><i class="fa-solid fa-chevron-right"></i> Executive Members</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Suggestions</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Contact Info</div>
+        <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Plot No. 708, Industrial Area, Phase-II, Chandigarh – 160002</span></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span><a href="tel:01724637082">0172-4637082</a></span></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span><a href="mailto:contact@chandigarhfurnitureassociation.com">contact@chandigarhfurnitureassociation.com</a></span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Chandigarh Furniture Association. All rights reserved.</p>
+      <p>Designed for <a href="#">CFA Chandigarh</a></p>
+    </div>
+  </div>
+</footer>
+<a href="https://wa.me/911724637082" class="whatsapp-float" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+<script src="js/main.js"></script>
+</body>
+</html>

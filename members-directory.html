@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Members Directory – Chandigarh Furniture Association</title>
+  <meta name="description" content="Browse the complete directory of 100+ CFA member companies — manufacturers, traders, importers of furniture in Chandigarh's Industrial Area." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .dir-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
+    @media(max-width:1024px){ .dir-grid{grid-template-columns:repeat(2,1fr);} }
+    @media(max-width:480px){ .dir-grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+<!-- NAV -->
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand">
+        <div class="brand-logo">CFA</div>
+        <div><div class="brand-text-main">Chandigarh Furniture<br>Association</div><span class="brand-text-sub">Est. 2000 · Chandigarh</span></div>
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active">Members <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="executive-members.html" class="dropdown-item"><i class="fa-solid fa-star"></i> Executive Members</a></li>
+            <li><a href="members-directory.html" class="dropdown-item"><i class="fa-solid fa-building"></i> Members Directory</a></li>
+            <li><a href="membership.html" class="dropdown-item"><i class="fa-solid fa-user-plus"></i> Become a Member</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="leadership.html" class="nav-link">Leadership</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="membership.html" class="btn btn-gold btn-sm">Join CFA</a>
+        <a href="contact.html" class="nav-login"><i class="fa-solid fa-lock" style="font-size:0.75rem;margin-right:4px;"></i>Login</a>
+      </div>
+      <button class="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-nav">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About CFA</a></li>
+      <li><a href="executive-members.html">Executive Members</a></li><li><a href="members-directory.html">Members Directory</a></li>
+      <li><a href="leadership.html">Leadership</a></li><li><a href="gallery.html">Gallery</a></li>
+      <li><a href="news.html">News &amp; Events</a></li><li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="mobile-nav-actions"><a href="membership.html" class="btn btn-gold btn-sm">Join CFA</a></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <span class="section-label">All Members</span>
+    <h1>Members Directory</h1>
+    <p>Browse 100+ furniture industry businesses in Chandigarh's Industrial Area.</p>
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a><i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i>
+      <span>Members</span><i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i><span>Directory</span>
+    </nav>
+  </div>
+</header>
+
+<section class="section-pad">
+  <div class="container">
+    <!-- Search & Filter -->
+    <div class="search-bar fade-in">
+      <div class="search-input-wrap">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" id="memberSearch" class="search-input" placeholder="Search by company name or owner..." autocomplete="off" />
+      </div>
+      <a href="membership.html" class="btn btn-gold"><i class="fa-solid fa-user-plus"></i> Join CFA</a>
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="filter-tabs fade-in">
+      <button class="filter-tab active" data-filter="all">All Categories</button>
+      <button class="filter-tab" data-filter="steel">Steel Furniture</button>
+      <button class="filter-tab" data-filter="office">Office &amp; School</button>
+      <button class="filter-tab" data-filter="mattress">Mattresses &amp; Foam</button>
+      <button class="filter-tab" data-filter="hardware">Hardware &amp; Accessories</button>
+      <button class="filter-tab" data-filter="plastic">Plastic &amp; Other</button>
+    </div>
+
+    <!-- Alpha Index -->
+    <div class="alpha-index fade-in">
+      <button class="alpha-btn active" data-letter="all">All</button>
+      <button class="alpha-btn" data-letter="A">A</button>
+      <button class="alpha-btn" data-letter="B">B</button>
+      <button class="alpha-btn" data-letter="C">C</button>
+      <button class="alpha-btn" data-letter="D">D</button>
+      <button class="alpha-btn" data-letter="G">G</button>
+      <button class="alpha-btn" data-letter="J">J</button>
+      <button class="alpha-btn" data-letter="K">K</button>
+      <button class="alpha-btn" data-letter="M">M</button>
+      <button class="alpha-btn" data-letter="N">N</button>
+      <button class="alpha-btn" data-letter="O">O</button>
+      <button class="alpha-btn" data-letter="P">P</button>
+      <button class="alpha-btn" data-letter="R">R</button>
+      <button class="alpha-btn" data-letter="S">S</button>
+      <button class="alpha-btn" data-letter="U">U</button>
+      <button class="alpha-btn" data-letter="V">V</button>
+      <button class="alpha-btn" data-letter="W">W</button>
+    </div>
+
+    <p class="results-count">Showing <strong>104</strong> member companies</p>
+
+    <!-- Members Grid -->
+    <div class="dir-grid" id="membersGrid">
+
+      <!-- A -->
+      <div><div class="member-card" data-name="aarti steel furniture" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">AS</div><div><div class="member-name">Aarti Steel Furniture</div><div class="member-owner">Sh. Pawan Gupta</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 756, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="aastha industries" data-cat="mattress">
+        <div class="member-card-header"><div class="member-avatar">AI</div><div><div class="member-name">Aastha Industries</div><div class="member-owner">Sh. Mohan Lal</div></div></div>
+        <div class="member-cat">Mattresses &amp; Foam</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 975, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="aay kay steel" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">AK</div><div><div class="member-name">AAY KAY Steel</div><div class="member-owner">Sh. Shyam Lal Gupta</div></div></div>
+        <div class="member-cat">Steel Fabricator · MS Pipe · CRC</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 182/65, Indl Area, Ph-I, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="abhi trading co" data-cat="hardware">
+        <div class="member-card-header"><div class="member-avatar">AT</div><div><div class="member-name">Abhi Trading Co.</div><div class="member-owner">Sh. Vinod Bansal</div></div></div>
+        <div class="member-cat">Board, Ply &amp; Furniture Accessories</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 1821, Deep Complex, Hallomajra, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="adarsh electricals" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">AE</div><div><div class="member-name">Adarsh Electricals</div><div class="member-owner">Sh. Sudhir Gupta</div></div></div>
+        <div class="member-cat">Desert Coolers · Steel Furniture</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 533, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="ag fibre" data-cat="mattress">
+        <div class="member-card-header"><div class="member-avatar">AG</div><div><div class="member-name">A.G. Fibre</div><div class="member-owner">Sh. Rajesh Goyal</div></div></div>
+        <div class="member-cat">Mattresses &amp; Foam</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 305, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="ajay steel industries" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">AJ</div><div><div class="member-name">Ajay Steel Industries</div><div class="member-owner">Sh. Ajay Gupta</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 121, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="ak enterprises" data-cat="mattress">
+        <div class="member-card-header"><div class="member-avatar">AK</div><div><div class="member-name">AK Enterprises</div><div class="member-owner">Sh. Sewak Rajput</div></div></div>
+        <div class="member-cat">Mattresses &amp; Foam</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Near Garg Clinic, Maloya, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="akshay enterprises" data-cat="hardware">
+        <div class="member-card-header"><div class="member-avatar">AE</div><div><div class="member-name">Akshay Enterprises</div><div class="member-owner">Sh. Rajiv Gupta</div></div></div>
+        <div class="member-cat">Hardware Goods · Furniture Accessories</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 616, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="amco furniture udyog" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">AF</div><div><div class="member-name">Amco Furniture Udyog</div><div class="member-owner">Sh. Ashwani Sethi</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 455-456, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="anil steel industries" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">AS</div><div><div class="member-name">Anil Steel Industries</div><div class="member-owner">Sh. Anil Jain</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 741, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="a-one steel industries" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">AO</div><div><div class="member-name">A-One Steel Industries</div><div class="member-owner">Sh. Sanjay Bansal</div></div></div>
+        <div class="member-cat">Steel Furniture · Plastic Chair · Mattress</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 3109, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="ashoka enterprises" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">AE</div><div><div class="member-name">Ashoka Enterprises</div><div class="member-owner">Sh. Amit Jain</div></div></div>
+        <div class="member-cat">Steel · Neelkamal Plastic Furniture</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>S.C.O. 3304, Sector 22D, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="ashoka furniture udyog" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">AF</div><div><div class="member-name">Ashoka Furniture Udyog</div><div class="member-owner">Sh. Sandeep Jain</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 304, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="ashoka industries" data-cat="office">
+        <div class="member-card-header"><div class="member-avatar">AI</div><div><div class="member-name">Ashoka Industries</div><div class="member-owner">Sh. Ashok Jain</div></div></div>
+        <div class="member-cat">Steel Furniture · Computer Tables</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 434-A, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <!-- B -->
+      <div><div class="member-card" data-name="balaji creations" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">BC</div><div><div class="member-name">Balaji Creations</div><div class="member-owner">Sh. Mohinder Singh</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 293, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="baljit industries" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">BI</div><div><div class="member-name">Baljit Industries</div><div class="member-owner">Sh. Harpreet Singh</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 319, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="bansal industries" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">BI</div><div><div class="member-name">Bansal Industries</div><div class="member-owner">Sh. Yograj Bansal</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 35, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="balaji steel furniture" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">BS</div><div><div class="member-name">Balaji Steel Furniture</div><div class="member-owner">Sh. Shyam Lal Bansal</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 771, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="basant steel industries" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">BS</div><div><div class="member-name">Basant Steel Industries</div><div class="member-owner">Sh. Charanjit Singh</div></div></div>
+        <div class="member-cat">Steel Furniture · Supreme Furniture · Mattresses</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 310, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="bharat trading co" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">BT</div><div><div class="member-name">Bharat Trading Co.</div><div class="member-owner">Sh. Sohan Gupta</div></div></div>
+        <div class="member-cat">Steel Furniture · Mattresses &amp; Foam</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 779, Chd-Amb Highway, Hallomajra</div>
+      </div></div>
+
+      <!-- C -->
+      <div><div class="member-card" data-name="chinar fastners" data-cat="hardware">
+        <div class="member-card-header"><div class="member-avatar">CF</div><div><div class="member-name">Chinar Fastners</div><div class="member-owner">Sh. Surinder Kumar Jain</div></div></div>
+        <div class="member-cat">Hardware Goods &amp; Furniture Accessories</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 62, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="classic furniture" data-cat="mattress">
+        <div class="member-card-header"><div class="member-avatar">CF</div><div><div class="member-name">Classic Furniture</div><div class="member-owner">Sh. Rohit Jindal</div></div></div>
+        <div class="member-cat">Mattresses &amp; Foam</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 819, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="classik furniture" data-cat="office">
+        <div class="member-card-header"><div class="member-avatar">CK</div><div><div class="member-name">Classik Furniture</div><div class="member-owner">Sh. Ashok Sethi</div></div></div>
+        <div class="member-cat">Steel Furniture · Computer Table</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 611, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="citizen furniture industries" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">CI</div><div><div class="member-name">Citizen Furniture Industries</div><div class="member-owner">Sh. Baldev Batra</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 915-A, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <!-- D -->
+      <div><div class="member-card" data-name="delux steel industries" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">DS</div><div><div class="member-name">Delux Steel Industries</div><div class="member-owner">Sh. Baljeet Singh</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 705, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="delhi furniture manufacturer" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">DF</div><div><div class="member-name">Delhi Furniture Manufacturer</div><div class="member-owner">Sh. Naresh Gupta</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 700/641, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="divine steel industries" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">DI</div><div><div class="member-name">Divine Steel Industries</div><div class="member-owner">Sh. Pawan Rana</div></div></div>
+        <div class="member-cat">Steel Furniture · Cello Chairs</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 362, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <!-- G -->
+      <div><div class="member-card" data-name="ganesh steel furniture" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">GS</div><div><div class="member-name">Ganesh Steel Furniture</div><div class="member-owner">Sh. Raj Kumar Goyal</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 550, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="garg traders" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">GT</div><div><div class="member-name">Garg Traders</div><div class="member-owner">Sh. Shishpal Garg</div></div></div>
+        <div class="member-cat">Steel Furniture · Desert Coolers</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 695, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="gd industries" data-cat="office">
+        <div class="member-card-header"><div class="member-avatar">GD</div><div><div class="member-name">G.D. Industries</div><div class="member-owner">Sh. Parveen Bansali</div></div></div>
+        <div class="member-cat">Steel Furniture · Office Furniture</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>335, Industrial Area Phase 2, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="gk engineering works" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">GK</div><div><div class="member-name">G.K Engineering Works</div><div class="member-owner">Sh. Daljit Singh</div></div></div>
+        <div class="member-cat">All Kinds of Steel Furniture</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>939, Industrial Area Phase 2, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="govind steel industries" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">GS</div><div><div class="member-name">Govind Steel Industries</div><div class="member-owner">Sh. Rampal Bansal</div></div></div>
+        <div class="member-cat">Steel Furniture · TV Trolleys</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 759, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="gupta furniture" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">GF</div><div><div class="member-name">Gupta Furniture</div><div class="member-owner">Sh. Suresh Kumar</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 410, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="gurdeep industries" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">GI</div><div><div class="member-name">Gurdeep Industries</div><div class="member-owner">Sh. Varinder Singh</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Fabricator</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 312, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <!-- J -->
+      <div><div class="member-card" data-name="jagdish foam sales" data-cat="mattress">
+        <div class="member-card-header"><div class="member-avatar">JF</div><div><div class="member-name">Jagdish Foam Sales (Regd.)</div><div class="member-owner">Sh. Roshan Lal Gupta</div></div></div>
+        <div class="member-cat">Mattress · Pillow · Sheets · Cushion</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>3120, Industrial Area Phase 2, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="jai ambe steel industries" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">JA</div><div><div class="member-name">Jai Ambe Steel Industries</div><div class="member-owner">Sh. Ram Gopal Bansal</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 301, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="jai luxmi steel industries" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">JL</div><div><div class="member-name">Jai Luxmi Steel Industries</div><div class="member-owner">Sh. Amarnath Bansal</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 301 &amp; 685, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="jain brothers" data-cat="mattress">
+        <div class="member-card-header"><div class="member-avatar">JB</div><div><div class="member-name">Jain Brothers</div><div class="member-owner">Sh. Sushil Jain</div></div></div>
+        <div class="member-cat">Steel Furniture · Mattresses · Desert Coolers</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 771, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="jain furniture industries" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">JF</div><div><div class="member-name">Jain Furniture Industries</div><div class="member-owner">Sh. Rahul Jain</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah · Mattresses</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 1605, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="jb associates" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">JB</div><div><div class="member-name">JB Associates</div><div class="member-owner">Sh. Jatin Batra</div></div></div>
+        <div class="member-cat">Steel Furniture · Sofa Sets</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 295, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="jogindra handlooms" data-cat="office">
+        <div class="member-card-header"><div class="member-avatar">JH</div><div><div class="member-name">Jogindra Handlooms</div><div class="member-owner">Sh. Satnam Singh Juneja</div></div></div>
+        <div class="member-cat">Rexine Cloth · Computer &amp; Office Table</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>#1026, Sector 44-B, Chd</div>
+      </div></div>
+
+      <!-- K -->
+      <div><div class="member-card" data-name="kailash hardware" data-cat="hardware">
+        <div class="member-card-header"><div class="member-avatar">KH</div><div><div class="member-name">Kailash Hardware</div><div class="member-owner">Sh. Kailash Gupta</div></div></div>
+        <div class="member-cat">Hardware Goods &amp; Furniture Accessories</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 582, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="kapur steel industries" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">KS</div><div><div class="member-name">Kapur Steel Industries</div><div class="member-owner">Sh. Pawan Kumar Bansal</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 606, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="konark steel industries" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">KI</div><div><div class="member-name">Konark Steel Industries</div><div class="member-owner">Sh. Lalit Singla</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 763, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="krishna steel furniture" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">KF</div><div><div class="member-name">Krishna Steel Furniture</div><div class="member-owner">Sh. Ram Rattan Garg</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 720, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <!-- M -->
+      <div><div class="member-card" data-name="mahaluxmi industrial corpn" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">MI</div><div><div class="member-name">Mahaluxmi Industrial Corpn.</div><div class="member-owner">Sh. Mukesh Garg</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 352-53-54, Indl Area, Ph-I, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="mittal hardware store" data-cat="hardware">
+        <div class="member-card-header"><div class="member-avatar">MH</div><div><div class="member-name">Mittal Hardware Store</div><div class="member-owner">Sh. Parveen Mittal</div></div></div>
+        <div class="member-cat">Hardware Goods &amp; Furniture Accessories</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 437, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="ms sales corporation" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">MS</div><div><div class="member-name">MS Sales Corporation</div><div class="member-owner">Sh. Joginder Singh</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 3117, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <!-- N -->
+      <div><div class="member-card" data-name="naresh steel furniture" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">NS</div><div><div class="member-name">Naresh Steel Furniture</div><div class="member-owner">Sh. Naresh Goyal</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 135, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="new furniture solutions" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">NF</div><div><div class="member-name">New Furniture Solutions</div><div class="member-owner">Sh. Subhash Goyal</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 757, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="northern poly products" data-cat="office">
+        <div class="member-card-header"><div class="member-avatar">NP</div><div><div class="member-name">Northern Poly Products</div><div class="member-owner">Sh. Sanjeev Dixit</div></div></div>
+        <div class="member-cat">Steel Furniture · School Furniture</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 283, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="nu tech system india" data-cat="office">
+        <div class="member-card-header"><div class="member-avatar">NT</div><div><div class="member-name">NU Tech System India</div><div class="member-owner">Sh. Jawahar Talwar</div></div></div>
+        <div class="member-cat">Steel Furniture · School Furniture</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 767, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <!-- O -->
+      <div><div class="member-card" data-name="omega steel industries" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">OS</div><div><div class="member-name">Omega Steel Industries</div><div class="member-owner">Sh. P.S. Puri</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 280, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="ore furniture" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">OF</div><div><div class="member-name">Ore Furniture (P) Ltd.</div><div class="member-owner">Sh. Manoj Kumar</div></div></div>
+        <div class="member-cat">High Class Steel Furniture</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 723, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <!-- P -->
+      <div><div class="member-card" data-name="prabhat enterprises" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">PE</div><div><div class="member-name">Prabhat Enterprises</div><div class="member-owner">Sh. Gulab Jain</div></div></div>
+        <div class="member-cat">Steel Furniture · Board, Ply &amp; Accessories</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 333, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="prince industries" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">PI</div><div><div class="member-name">Prince Industries</div><div class="member-owner">Sh. Rajeev Kumar</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 129, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <!-- R -->
+      <div><div class="member-card" data-name="raj steel furniture" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">RS</div><div><div class="member-name">Raj Steel Furniture</div><div class="member-owner">Sh. Suresh Kumar</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 801, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="royal steel products" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">RP</div><div><div class="member-name">Royal Steel Products</div><div class="member-owner">Sh. Naresh Kumar</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 326 &amp; 338, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="royal mattress industries" data-cat="mattress">
+        <div class="member-card-header"><div class="member-avatar">RM</div><div><div class="member-name">Royal Mattress Industries</div><div class="member-owner">Sh. Neeraj Mittal</div></div></div>
+        <div class="member-cat">Mattresses &amp; Foam</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 548, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="rs steel industries" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">RI</div><div><div class="member-name">R.S. Steel Industries</div><div class="member-owner">Sh. Abhishek Aggarwal</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 148, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <!-- S -->
+      <div><div class="member-card" data-name="shree vinayak industries" data-cat="office">
+        <div class="member-card-header"><div class="member-avatar">SV</div><div><div class="member-name">Shree Vinayak Industries</div><div class="member-owner">Sh. Rajan Jindal</div></div></div>
+        <div class="member-cat">Office Furniture · School Furniture</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>321, Industrial Area Phase 2, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="shree balaji trading co" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">SB</div><div><div class="member-name">Shree Balaji Trading Co.</div><div class="member-owner">Sh. Bhushan Mittal</div></div></div>
+        <div class="member-cat">Steel Furniture · Desert Coolers</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 771, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="singla furniture mall" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">SM</div><div><div class="member-name">Singla Furniture Mall</div><div class="member-owner">Sh. Mahesh Singla</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 702, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="smart industries" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">SI</div><div><div class="member-name">Smart Industries</div><div class="member-owner">Sh. DharamVir Goyal</div></div></div>
+        <div class="member-cat">Steel Furniture · Powder Coating</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 419-A, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="stylex industries" data-cat="hardware">
+        <div class="member-card-header"><div class="member-avatar">SX</div><div><div class="member-name">Stylex Industries</div><div class="member-owner">Sh. Ramesh Garg</div></div></div>
+        <div class="member-cat">Steel Furniture · Kitchen Accessories</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 697 &amp; 298, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="sun steel industries" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">SS</div><div><div class="member-name">Sun Steel Industries</div><div class="member-owner">Sh. Satish Gupta</div></div></div>
+        <div class="member-cat">Steel &amp; School Furniture</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 49, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <!-- U -->
+      <div><div class="member-card" data-name="ujjwal steel industries" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">US</div><div><div class="member-name">Ujjwal Steel Industries</div><div class="member-owner">Sh. Hari Mohan (Deepak)</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 1575, Deep Complex, Hallomajra, Chd</div>
+      </div></div>
+
+      <!-- V -->
+      <div><div class="member-card" data-name="vanser the furniture merchants" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">VF</div><div><div class="member-name">Vanser – The Furniture Merchants</div><div class="member-owner">Sh. Satish Goyal</div></div></div>
+        <div class="member-cat">Steel Furniture · Office Furniture · CRC Pipes</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 758, Indl Area, Phase-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="vintage mattress industries" data-cat="mattress">
+        <div class="member-card-header"><div class="member-avatar">VM</div><div><div class="member-name">Vintage Mattress Industries</div><div class="member-owner">Sh. Sunil Bansal</div></div></div>
+        <div class="member-cat">Mattresses &amp; Foam</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 708, Indl Area, Ph-II, Chd</div>
+      </div></div>
+
+      <div><div class="member-card" data-name="vishnu industrial corporation" data-cat="steel">
+        <div class="member-card-header"><div class="member-avatar">VI</div><div><div class="member-name">Vishnu Industrial Corporation</div><div class="member-owner">Sh. Rajesh Kumar Goyal</div></div></div>
+        <div class="member-cat">Steel Furniture · Steel Almirah</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 784, Indl Area, Phase-II, Chd</div>
+      </div></div>
+
+      <!-- W -->
+      <div><div class="member-card" data-name="western enterprises" data-cat="hardware">
+        <div class="member-card-header"><div class="member-avatar">WE</div><div><div class="member-name">Western Enterprises</div><div class="member-owner">Sh. Ramesh Jain</div></div></div>
+        <div class="member-cat">Steel Furniture · Hardware Goods · Accessories</div>
+        <div class="member-address"><i class="fa-solid fa-location-dot"></i>Plot No. 119, Indl Area, Phase-II, Chd</div>
+      </div></div>
+
+    </div><!-- /dir-grid -->
+
+    <div id="noResults" class="no-results" style="display:none;">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <p><strong>No members found.</strong> Try a different search term or category.</p>
+    </div>
+
+    <div style="text-align:center;margin-top:3rem;" class="fade-in">
+      <p style="margin-bottom:1rem;color:var(--gray-500);">Is your company not listed?</p>
+      <a href="membership.html" class="btn btn-gold btn-lg"><i class="fa-solid fa-user-plus"></i> Join CFA Today</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">CFA</div>
+        <div class="brand-text-main" style="color:var(--white);margin-bottom:0.25rem;">Chandigarh Furniture Association</div>
+        <p class="footer-tagline">Uniting Chandigarh's furniture industry since 2000.</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About CFA</a></li>
+          <li><a href="leadership.html"><i class="fa-solid fa-chevron-right"></i> Leadership</a></li>
+          <li><a href="news.html"><i class="fa-solid fa-chevron-right"></i> News &amp; Events</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Member Services</div>
+        <ul class="footer-links">
+          <li><a href="membership.html"><i class="fa-solid fa-chevron-right"></i> Become a Member</a></li>
+          <li><a href="executive-members.html"><i class="fa-solid fa-chevron-right"></i> Executive Members</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Contact Info</div>
+        <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Plot No. 708, Industrial Area, Phase-II, Chandigarh – 160002</span></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>0172-4637082</span></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>contact@chandigarhfurnitureassociation.com</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Chandigarh Furniture Association. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<a href="https://wa.me/911724637082" class="whatsapp-float" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+<script src="js/main.js"></script>
+<script src="js/members.js"></script>
+</body>
+</html>

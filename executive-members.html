@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Executive Members – Chandigarh Furniture Association</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .exec-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.75rem; }
+    .exec-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      border: 2px solid transparent;
+      transition: var(--transition);
+    }
+    .exec-card:hover { border-color: var(--gold); transform: translateY(-6px); box-shadow: var(--shadow-xl); }
+    .exec-avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, var(--navy), var(--blue)); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-family:'Poppins',sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--white); border: 3px solid var(--gold); }
+    .exec-name { font-family:'Poppins',sans-serif; font-weight: 700; color: var(--navy); font-size: 1rem; margin-bottom: 0.5rem; }
+    .exec-role-badge { display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 12px; border-radius: 20px; background: rgba(27,82,153,0.1); color: var(--blue); margin-bottom: 0.75rem; }
+    .exec-phone { font-size: 0.85rem; color: var(--gray-500); display: flex; align-items: center; justify-content: center; gap: 6px; }
+    @media(max-width:1024px){ .exec-grid{grid-template-columns:repeat(2,1fr);} }
+    @media(max-width:480px){ .exec-grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+<!-- NAV -->
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand">
+        <div class="brand-logo">CFA</div>
+        <div><div class="brand-text-main">Chandigarh Furniture<br>Association</div><span class="brand-text-sub">Est. 2000 · Chandigarh</span></div>
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active">Members <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="executive-members.html" class="dropdown-item"><i class="fa-solid fa-star"></i> Executive Members</a></li>
+            <li><a href="members-directory.html" class="dropdown-item"><i class="fa-solid fa-building"></i> Members Directory</a></li>
+            <li><a href="membership.html" class="dropdown-item"><i class="fa-solid fa-user-plus"></i> Become a Member</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="leadership.html" class="nav-link">Leadership</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="membership.html" class="btn btn-gold btn-sm">Join CFA</a>
+        <a href="contact.html" class="nav-login"><i class="fa-solid fa-lock" style="font-size:0.75rem;margin-right:4px;"></i>Login</a>
+      </div>
+      <button class="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-nav">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About CFA</a></li>
+      <li><a href="executive-members.html">Executive Members</a></li><li><a href="members-directory.html">Members Directory</a></li>
+      <li><a href="leadership.html">Leadership</a></li><li><a href="gallery.html">Gallery</a></li>
+      <li><a href="news.html">News &amp; Events</a></li><li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="mobile-nav-actions"><a href="membership.html" class="btn btn-gold btn-sm">Join CFA</a></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <span class="section-label">CFA Members</span>
+    <h1>Executive Members</h1>
+    <p>The elected executive members who represent and serve the entire CFA membership body.</p>
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a><i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i>
+      <span>Members</span><i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i><span>Executive Members</span>
+    </nav>
+  </div>
+</header>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Elected Representatives</span>
+      <h2>Our Executive Members</h2>
+      <div class="divider"></div>
+      <p>These 11 executive members are the elected representatives of the CFA body — driving decisions, events, and industry action on behalf of all members.</p>
+    </div>
+    <div class="exec-grid">
+      <div class="exec-card fade-in">
+        <div class="exec-avatar">AJ</div>
+        <div class="exec-name">Anil Jain</div>
+        <div class="exec-role-badge">Executive Member</div>
+        <div class="exec-phone"><i class="fa-solid fa-phone"></i> 9814016741</div>
+      </div>
+      <div class="exec-card fade-in fade-in-delay-1">
+        <div class="exec-avatar">AJ2</div>
+        <div class="exec-name">Ashok Jain</div>
+        <div class="exec-role-badge">Executive Member</div>
+        <div class="exec-phone"><i class="fa-solid fa-phone"></i> 9876400434</div>
+      </div>
+      <div class="exec-card fade-in fade-in-delay-2">
+        <div class="exec-avatar">CS</div>
+        <div class="exec-name">Charanjit Singh</div>
+        <div class="exec-role-badge">Executive Member</div>
+        <div class="exec-phone"><i class="fa-solid fa-phone"></i> 9814014639</div>
+      </div>
+      <div class="exec-card fade-in">
+        <div class="exec-avatar">KG</div>
+        <div class="exec-name">Kailash Gupta</div>
+        <div class="exec-role-badge">Executive Member</div>
+        <div class="exec-phone"><i class="fa-solid fa-phone"></i> 9786052695</div>
+      </div>
+      <div class="exec-card fade-in fade-in-delay-1">
+        <div class="exec-avatar">MG</div>
+        <div class="exec-name">Mukesh Garg</div>
+        <div class="exec-role-badge">Executive Member</div>
+        <div class="exec-phone"><i class="fa-solid fa-phone"></i> 9915034100</div>
+      </div>
+      <div class="exec-card fade-in fade-in-delay-2">
+        <div class="exec-avatar">NM</div>
+        <div class="exec-name">Neeraj Mittal</div>
+        <div class="exec-role-badge">Executive Member</div>
+        <div class="exec-phone"><i class="fa-solid fa-phone"></i> 9417073156</div>
+      </div>
+      <div class="exec-card fade-in">
+        <div class="exec-avatar">RJ</div>
+        <div class="exec-name">Rajender Jain</div>
+        <div class="exec-role-badge">Executive Member</div>
+        <div class="exec-phone"><i class="fa-solid fa-phone"></i> 9814130243</div>
+      </div>
+      <div class="exec-card fade-in fade-in-delay-1">
+        <div class="exec-avatar">RS</div>
+        <div class="exec-name">Ram Sunder</div>
+        <div class="exec-role-badge">Executive Member</div>
+        <div class="exec-phone"><i class="fa-solid fa-phone"></i> 9417030308</div>
+      </div>
+      <div class="exec-card fade-in fade-in-delay-2">
+        <div class="exec-avatar">SB</div>
+        <div class="exec-name">Sanjay Bansal</div>
+        <div class="exec-role-badge">Executive Member</div>
+        <div class="exec-phone"><i class="fa-solid fa-phone"></i> 9417053082</div>
+      </div>
+      <div class="exec-card fade-in">
+        <div class="exec-avatar">SLG</div>
+        <div class="exec-name">Shyam Lal Gupta</div>
+        <div class="exec-role-badge">Executive Member</div>
+        <div class="exec-phone"><i class="fa-solid fa-phone"></i> 9417004352</div>
+      </div>
+      <div class="exec-card fade-in fade-in-delay-1">
+        <div class="exec-avatar">VB</div>
+        <div class="exec-name">Vinod Bansal</div>
+        <div class="exec-role-badge">Executive Member</div>
+        <div class="exec-phone"><i class="fa-solid fa-phone"></i> 9814710913</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:3rem;">
+      <a href="members-directory.html" class="btn btn-primary btn-lg"><i class="fa-solid fa-building"></i> View Full Members Directory</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="fade-in">
+      <h2 class="text-white">Interested in Becoming an Executive Member?</h2>
+      <p>Join CFA as a regular member first, and build your path to industry leadership.</p>
+      <a href="membership.html" class="btn btn-gold btn-lg"><i class="fa-solid fa-user-plus"></i> Apply for Membership</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">CFA</div>
+        <div class="brand-text-main" style="color:var(--white);margin-bottom:0.25rem;">Chandigarh Furniture Association</div>
+        <p class="footer-tagline">Uniting Chandigarh's furniture industry since 2000.</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About CFA</a></li>
+          <li><a href="members-directory.html"><i class="fa-solid fa-chevron-right"></i> Members Directory</a></li>
+          <li><a href="leadership.html"><i class="fa-solid fa-chevron-right"></i> Leadership</a></li>
+          <li><a href="news.html"><i class="fa-solid fa-chevron-right"></i> News &amp; Events</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Member Services</div>
+        <ul class="footer-links">
+          <li><a href="membership.html"><i class="fa-solid fa-chevron-right"></i> Become a Member</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Contact Info</div>
+        <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Plot No. 708, Industrial Area, Phase-II, Chandigarh – 160002</span></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>0172-4637082</span></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>contact@chandigarhfurnitureassociation.com</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Chandigarh Furniture Association. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<a href="https://wa.me/911724637082" class="whatsapp-float" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+<script src="js/main.js"></script>
+</body>
+</html>

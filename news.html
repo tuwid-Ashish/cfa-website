@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News &amp; Events – Chandigarh Furniture Association</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .news-main-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: start; }
+    .news-full-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2rem; }
+    .sidebar-widget { background: var(--white); border-radius: var(--radius-lg); padding: 1.5rem; box-shadow: var(--shadow-md); border: 1px solid var(--gray-200); margin-bottom: 1.5rem; }
+    .sidebar-widget h4 { color: var(--navy); margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--gold); }
+    .upcoming-item { display: flex; gap: 1rem; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--gray-200); }
+    .upcoming-item:last-child { margin-bottom:0; padding-bottom:0; border-bottom:none; }
+    .upcoming-date { min-width: 52px; height: 52px; background: linear-gradient(135deg,var(--navy),var(--blue)); border-radius: var(--radius-sm); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--white); }
+    .upcoming-date .day { font-family:'Poppins',sans-serif; font-weight:800; font-size:1.1rem; line-height:1; }
+    .upcoming-date .month { font-size:0.65rem; text-transform:uppercase; letter-spacing:0.06em; opacity:0.8; }
+    .upcoming-text h5 { font-size:0.88rem; color:var(--navy); margin-bottom:3px; }
+    .upcoming-text p { font-size:0.78rem; color:var(--gray-500); margin:0; }
+    @media(max-width:1024px){ .news-main-grid{grid-template-columns:1fr;} }
+    @media(max-width:768px){ .news-full-grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand"><div class="brand-logo">CFA</div><div><div class="brand-text-main">Chandigarh Furniture<br>Association</div><span class="brand-text-sub">Est. 2000 · Chandigarh</span></div></a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Members <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="executive-members.html" class="dropdown-item"><i class="fa-solid fa-star"></i> Executive Members</a></li>
+            <li><a href="members-directory.html" class="dropdown-item"><i class="fa-solid fa-building"></i> Members Directory</a></li>
+            <li><a href="membership.html" class="dropdown-item"><i class="fa-solid fa-user-plus"></i> Become a Member</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="leadership.html" class="nav-link">Leadership</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="news.html" class="nav-link active">News</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions"><a href="membership.html" class="btn btn-gold btn-sm">Join CFA</a></div>
+      <button class="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-nav"><ul class="mobile-nav-list"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="members-directory.html">Members Directory</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="news.html">News</a></li><li><a href="contact.html">Contact</a></li></ul><div class="mobile-nav-actions"><a href="membership.html" class="btn btn-gold btn-sm">Join CFA</a></div></div>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <span class="section-label">Stay Updated</span>
+    <h1>News &amp; Events</h1>
+    <p>Announcements, workshops, blood camps, and the latest from Chandigarh's furniture industry.</p>
+    <nav class="breadcrumb"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i><span>News &amp; Events</span></nav>
+  </div>
+</header>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="news-main-grid">
+      <!-- News Articles -->
+      <div>
+        <div class="filter-tabs fade-in">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="event">Events</button>
+          <button class="filter-tab" data-filter="social">Social</button>
+          <button class="filter-tab" data-filter="workshop">Workshops</button>
+          <button class="filter-tab" data-filter="announcement">Announcements</button>
+        </div>
+        <div class="news-full-grid">
+          <article class="news-card fade-in" data-cat="event">
+            <div class="news-card-img"><img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&dpr=1" alt="AGM 2026" loading="lazy" /></div>
+            <div class="news-card-body">
+              <div class="news-meta"><div class="news-date"><i class="fa-regular fa-calendar"></i> Jan 15, 2026</div><div class="news-tag">Event</div></div>
+              <h4>Annual General Meeting 2026</h4>
+              <p>CFA held its Annual General Meeting with record participation from 90+ member companies to discuss the 2026 roadmap, new membership guidelines, and digital initiatives.</p>
+              <a href="#" class="news-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+          <article class="news-card fade-in fade-in-delay-1" data-cat="social">
+            <div class="news-card-img"><img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&dpr=1" alt="Blood Donation" loading="lazy" /></div>
+            <div class="news-card-body">
+              <div class="news-meta"><div class="news-date"><i class="fa-regular fa-calendar"></i> Dec 12, 2025</div><div class="news-tag">Social</div></div>
+              <h4>Blood Donation Camp — Phase II</h4>
+              <p>CFA organized its annual blood donation camp at Industrial Area Phase-II. Over 150 volunteers participated, reinforcing CFA's commitment to community service.</p>
+              <a href="#" class="news-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+          <article class="news-card fade-in" data-cat="workshop">
+            <div class="news-card-img"><img src="https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&dpr=1" alt="GST Workshop" loading="lazy" /></div>
+            <div class="news-card-body">
+              <div class="news-meta"><div class="news-date"><i class="fa-regular fa-calendar"></i> Nov 8, 2025</div><div class="news-tag">Workshop</div></div>
+              <h4>GST &amp; Taxation Workshop for Members</h4>
+              <p>CFA conducted a comprehensive workshop on GST updates, new taxation regulations, and compliance guidelines to help member businesses stay current.</p>
+              <a href="#" class="news-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+          <article class="news-card fade-in fade-in-delay-1" data-cat="announcement">
+            <div class="news-card-img"><img src="https://images.pexels.com/photos/8276364/pexels-photo-8276364.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&dpr=1" alt="CFA Announcement" loading="lazy" /></div>
+            <div class="news-card-body">
+              <div class="news-meta"><div class="news-date"><i class="fa-regular fa-calendar"></i> Oct 22, 2025</div><div class="news-tag">Announcement</div></div>
+              <h4>New CFA Website Launch</h4>
+              <p>CFA is proud to announce the complete redesign and relaunch of its digital presence — a modern website worthy of Asia's furniture capital.</p>
+              <a href="#" class="news-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+          <article class="news-card fade-in" data-cat="workshop">
+            <div class="news-card-img"><img src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&dpr=1" alt="Security Workshop" loading="lazy" /></div>
+            <div class="news-card-body">
+              <div class="news-meta"><div class="news-date"><i class="fa-regular fa-calendar"></i> Sep 5, 2025</div><div class="news-tag">Workshop</div></div>
+              <h4>Industrial Security Briefing</h4>
+              <p>CFA hosted a security awareness session for member businesses in Industrial Area Phase-II, covering best practices for facility security and fire safety.</p>
+              <a href="#" class="news-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+          <article class="news-card fade-in fade-in-delay-1" data-cat="event">
+            <div class="news-card-img"><img src="https://images.pexels.com/photos/6969830/pexels-photo-6969830.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&dpr=1" alt="Furniture Expo" loading="lazy" /></div>
+            <div class="news-card-body">
+              <div class="news-meta"><div class="news-date"><i class="fa-regular fa-calendar"></i> Aug 18, 2025</div><div class="news-tag">Event</div></div>
+              <h4>Furniture Trade Expo — CFA Participation</h4>
+              <p>CFA led a delegation of 20+ member companies to the North India Furniture Trade Expo, showcasing Chandigarh's manufacturing excellence.</p>
+              <a href="#" class="news-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div>
+        <div class="sidebar-widget fade-in">
+          <h4><i class="fa-regular fa-calendar" style="margin-right:8px;color:var(--gold);"></i>Upcoming Events</h4>
+          <div class="upcoming-item">
+            <div class="upcoming-date"><div class="day">15</div><div class="month">Apr</div></div>
+            <div class="upcoming-text"><h5>Quarterly Member Meet</h5><p>Industrial Area Phase-II Community Hall</p></div>
+          </div>
+          <div class="upcoming-item">
+            <div class="upcoming-date"><div class="day">20</div><div class="month">Apr</div></div>
+            <div class="upcoming-text"><h5>Blood Donation Camp</h5><p>CFA Office, Phase-II</p></div>
+          </div>
+          <div class="upcoming-item">
+            <div class="upcoming-date"><div class="day">5</div><div class="month">May</div></div>
+            <div class="upcoming-text"><h5>GST Compliance Seminar</h5><p>CFA Meeting Hall, Chandigarh</p></div>
+          </div>
+        </div>
+
+        <div class="sidebar-widget fade-in fade-in-delay-1">
+          <h4><i class="fa-solid fa-tag" style="margin-right:8px;color:var(--gold);"></i>Categories</h4>
+          <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+            <span style="padding:5px 14px;border-radius:20px;background:rgba(27,82,153,0.1);color:var(--blue);font-size:0.82rem;font-weight:600;">Events (3)</span>
+            <span style="padding:5px 14px;border-radius:20px;background:rgba(27,82,153,0.1);color:var(--blue);font-size:0.82rem;font-weight:600;">Workshops (2)</span>
+            <span style="padding:5px 14px;border-radius:20px;background:rgba(27,82,153,0.1);color:var(--blue);font-size:0.82rem;font-weight:600;">Social (1)</span>
+            <span style="padding:5px 14px;border-radius:20px;background:rgba(27,82,153,0.1);color:var(--blue);font-size:0.82rem;font-weight:600;">Announcements (1)</span>
+          </div>
+        </div>
+
+        <div class="sidebar-widget fade-in fade-in-delay-2" style="background:linear-gradient(135deg,var(--navy),var(--blue));border:none;">
+          <h4 style="color:var(--white);">Stay Connected</h4>
+          <p style="color:rgba(255,255,255,0.75);font-size:0.9rem;margin-bottom:1.25rem;">Don't miss CFA events and announcements. Join our WhatsApp group or follow us online.</p>
+          <a href="https://wa.me/911724637082" class="btn btn-gold btn-sm" target="_blank"><i class="fa-brands fa-whatsapp"></i> Join WhatsApp Group</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-brand-logo">CFA</div><div class="brand-text-main" style="color:var(--white);margin-bottom:0.25rem;">Chandigarh Furniture Association</div><p class="footer-tagline">Uniting Chandigarh's furniture industry since 2000.</p><div class="social-links"><a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a><a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a><a href="#" class="social-link"><i class="fa-brands fa-whatsapp"></i></a></div></div>
+      <div><div class="footer-heading">Quick Links</div><ul class="footer-links"><li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li><li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About CFA</a></li><li><a href="members-directory.html"><i class="fa-solid fa-chevron-right"></i> Members Directory</a></li><li><a href="gallery.html"><i class="fa-solid fa-chevron-right"></i> Gallery</a></li></ul></div>
+      <div><div class="footer-heading">Member Services</div><ul class="footer-links"><li><a href="membership.html"><i class="fa-solid fa-chevron-right"></i> Become a Member</a></li><li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li></ul></div>
+      <div><div class="footer-heading">Contact Info</div><div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Plot No. 708, Industrial Area, Phase-II, Chandigarh – 160002</span></div><div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>0172-4637082</span></div></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Chandigarh Furniture Association. All rights reserved.</p></div>
+  </div>
+</footer>
+<a href="https://wa.me/911724637082" class="whatsapp-float" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+<script src="js/main.js"></script>
+</body>
+</html>
